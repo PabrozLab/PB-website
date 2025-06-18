@@ -3,48 +3,296 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - PabrozLab</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PabrozLab | Home </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" type="image/png" href="./favicon.ico"> -->
+    <!-- <link rel="icon" type="image/png" href="./pzCover.png"> -->
+    <link rel="icon" type="image/png" href="./PBnew4.png">
+
 </head>
 
 <body>
-  <header>
-    <a href="index.html" class="logo">PabrozLab</a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <header>
+        <a href="index.html" class="logo"><img src="./PBnew4.png" alt="Logo" width="50" height="50"></a>
+        <!-- <button class="menu-toggle" onclick="toggleMenu()">☰</button> -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="tooltip nav-link" data-tooltip="Home">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="tooltip nav-link" data-tooltip="Courses">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html" class="tooltip nav-link" data-tooltip="Projects">
+                        <span class="nav-icon">💼</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shop.html" class="tooltip nav-link" data-tooltip="Shop">
+                        <span class="nav-icon">🛒</span>
+                        <span class="nav-text">Shop</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="tooltip nav-link" data-tooltip="About Us">
+                        <span class="nav-icon">ℹ️</span>
+                        <span class="nav-text">About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="tooltip nav-link" data-tooltip="Contact">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-  </header>
-  <main>
-    <section class="hero">
+    </header>
+    <main>
+        <section class="hero">
 
-      <!-- <section class="alt-bg"> -->
-      <h1>Welcome to PabrozLab</h1>
-      <p>Empowering Young Minds Through STEM, Robotics, and Innovation.</p>
-      <!-- </section> -->
+            <!-- <section class="alt-bg"> -->
+            <h1>Welcome to PabrozLab</h1>
+            <p>Empowering Young Minds Through STEM, Robotics, and Innovation.</p>
+            <!-- </section> -->
 
-      <img src="./pzCover.png" alt="cover pb  " "height=" 700px" width="100%">
+            <!-- <img src="./pzCover.png" alt="cover pb  " "height=" 700px" width="100%">
       <img src="./python brainmap.png" alt="" height="900px" width="100%">
-      <img src="./Resistor.png" alt="" height="700px" width="100%">
+      <img src="./Resistor.png" alt="" height="700px" width="100%"> -->
 
 
 
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 PabrozLab. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+        </section>
+
+        <!-- Value Proposition -->
+        <section class="container1">
+            <h2 class="section-title">Everything You Need for STEM Education</h2>
+            <div class="value-props">
+                <div class="value-prop fade-in-up">
+                    <div class="value-prop-icon">🔧</div>
+                    <h3>Premium Components</h3>
+                    <p>High-quality electronics components, sensors, and tools designed for educational environments
+                        with safety certifications and durability.</p>
+                </div>
+                <div class="value-prop fade-in-up">
+                    <div class="value-prop-icon">📦</div>
+                    <h3>Complete Project Kits</h3>
+                    <p>Ready-to-build projects with step-by-step guides, curriculum alignment, and progressive
+                        difficulty levels for all ages.</p>
+                </div>
+                <div class="value-prop fade-in-up">
+                    <div class="value-prop-icon">📚</div>
+                    <h3>Learning Resources</h3>
+                    <p>Comprehensive tutorials, lesson plans, and educational materials created by experienced STEM
+                        educators.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience Navigation -->
+        <section class="audience-nav">
+            <div class="container1">
+                <h2 class="section-title">Choose Your Path</h2>
+                <div class="audience-cards">
+                    <div class="audience-card" onclick="navigateToAudience('educators')">
+                        <h3>👩‍🏫 For Educators</h3>
+                        <p>Classroom-ready solutions, bulk pricing, curriculum alignment, and teacher support resources.
+                        </p>
+                        <div style="margin-top: 1rem; color: #667eea; font-weight: bold;">Explore Education Solutions →
+                        </div>
+                    </div>
+                    <div class="audience-card" onclick="navigateToAudience('students')">
+                        <h3>🎓 For Students</h3>
+                        <p>Beginner-friendly kits, progressive learning paths, and projects that make STEM concepts come
+                            alive.</p>
+                        <div style="margin-top: 1rem; color: #667eea; font-weight: bold;">Start Learning →</div>
+                    </div>
+                    <div class="audience-card" onclick="navigateToAudience('makers')">
+                        <h3>🔨 For Makers</h3>
+                        <p>Professional-grade components, advanced projects, and technical specifications for serious
+                            creators.</p>
+                        <div style="margin-top: 1rem; color: #667eea; font-weight: bold;">Build Something Amazing →
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="container1" id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="featured-projects">
+                <div class="project-card">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="difficulty">Beginner</span>
+                            <span>Ages 10-14</span>
+                        </div>
+                        <h3>Smart Home Controller</h3>
+                        <p>Learn IoT basics by building a system that controls lights, temperature, and security with
+                            smartphone integration.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Skills:</strong> Programming, Sensors, Wireless Communication
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🚗</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="difficulty" style="background: #fff3e0; color: #f57c00;">Intermediate</span>
+                            <span>Ages 12-16</span>
+                        </div>
+                        <h3>Autonomous Robot Car</h3>
+                        <p>Build and program a self-navigating robot using ultrasonic sensors, motors, and computer
+                            vision.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Skills:</strong> Robotics, AI, Mechanical Design
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🌱</div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="difficulty" style="background: #ffebee; color: #d32f2f;">Advanced</span>
+                            <span>Ages 14+</span>
+                        </div>
+                        <h3>Smart Agriculture System</h3>
+                        <p>Create an automated plant monitoring system with soil sensors, weather tracking, and data
+                            analytics.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Skills:</strong> Data Science, Environmental Monitoring, Automation
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators
+        <section class="trust-section">
+            <div class="container1">
+                <h2 class="section-title">Trusted by Leading Institutions</h2>
+                <div class="trust-logos">
+                    <div class="trust-logo">MIT Labs</div>
+                    <div class="trust-logo">Stanford University</div>
+                    <div class="trust-logo">NYC Public Schools</div>
+                    <div class="trust-logo">MakerSpace Network</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "STEMCore has transformed our engineering curriculum. The quality of components and educational materials is exceptional, and our students are more engaged than ever."
+                    </div>
+                    <div class="testimonial-author">
+                        - Dr. Sarah Johnson, Head of STEM, Lincoln High School
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Educational Benefits
+        <section class="container1">
+            <h2 class="section-title">Measurable Learning Outcomes</h2>
+            <div class="interactive-demo">
+                <h3>See the Impact</h3>
+                <p>Our projects align with NGSS, Common Core, and international STEM standards</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <div style="font-size: 2rem; color: #667eea; font-weight: bold;">95%</div>
+                        <div>Student Engagement Increase</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; color: #667eea; font-weight: bold;">40+</div>
+                        <div>Curriculum Standards Met</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; color: #667eea; font-weight: bold;">K-12</div>
+                        <div>Grade Levels Supported</div>
+                    </div>
+                </div>
+                <button class="demo-button" onclick="showDemo()">View Curriculum Alignment</button>
+            </div>
+        </section> -->
+
+        <!-- Product Categories -->
+        <section class="container1" id="products">
+            <h2 class="section-title">Product Categories</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h4>Microcontrollers</h4>
+                    <p>Arduino, Raspberry Pi, ESP32</p>
+                </div>
+                <div class="category-card">
+                    <h4>Sensors</h4>
+                    <p>Temperature, Motion, Light, Sound</p>
+                </div>
+                <div class="category-card">
+                    <h4>Actuators</h4>
+                    <p>Motors, Servos, LEDs, Speakers</p>
+                </div>
+                <div class="category-card">
+                    <h4>Basic Components</h4>
+                    <p>Resistors, Capacitors, Wires</p>
+                </div>
+                <div class="category-card">
+                    <h4>Tools</h4>
+                    <p>Multimeters, Soldering, Breadboards</p>
+                </div>
+                <div class="category-card">
+                    <h4>Project Kits</h4>
+                    <p>Complete Learning Solutions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Institutional Solutions -->
+        <section class="container1"
+            style="background: #f8f9fa; padding: 4rem 2rem; border-radius: 20px; margin: 4rem 0;">
+            <div style="text-align: center;">
+                <h2>Institutional Solutions</h2>
+                <p style="font-size: 1.2rem; margin: 1rem 0;">Special pricing and support for schools, universities, and
+                    maker spaces</p>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4>🏫 Bulk Pricing</h4>
+                        <p>Volume discounts starting at 10 units</p>
+                    </div>
+                    <div>
+                        <h4>📋 Custom Curricula</h4>
+                        <p>Tailored learning paths for your program</p>
+                    </div>
+                    <div>
+                        <h4>🎓 Teacher Training</h4>
+                        <p>Professional development workshops</p>
+                    </div>
+                    <div>
+                        <h4>🛠️ Technical Support</h4>
+                        <p>Dedicated education specialists</p>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Request
+                    Institutional Quote</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 PabrozLab. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
