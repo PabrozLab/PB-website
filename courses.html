@@ -5,26 +5,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courses - PabrozLab</title>
+  <title>PabrozLab | Courses </title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
+ <link rel="icon" type="image/png" href="./PBnew4.png">
 </head>
 
 <body>
   <header>
-    <a href="index.html" class="logo">PabrozLab</a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
+    <a href="index.html" class="logo"><img src="./PBnew4.png" alt="Logo" width="50" height="50"></a>
+    <!-- <button class="menu-toggle" onclick="toggleMenu()">☰</button> -->
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="index.html" class="tooltip nav-link" data-tooltip="Home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html" class="tooltip nav-link" data-tooltip="Courses">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="projects.html" class="tooltip nav-link" data-tooltip="Projects">
+            <span class="nav-icon">💼</span>
+            <span class="nav-text">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="shop.html" class="tooltip nav-link" data-tooltip="Shop">
+            <span class="nav-icon">🛒</span>
+            <span class="nav-text">Shop</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="tooltip nav-link" data-tooltip="About Us">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-text">About Us</span>
+          </a>
+        </li>
+        <li>
+          <a href="contact.html" class="tooltip nav-link" data-tooltip="Contact">
+            <span class="nav-icon">📞</span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
       </ul>
     </nav>
+
   </header>
   <main>
     <section class="hero">
@@ -56,7 +87,7 @@
         <p>Interactive Python programming course designed for beginners and students.</p>
       </div>
       <div class="card">
-        <h3>Python for ML</h3>
+        <h3>Python for Beginners</h3>
         <p>Interactive Python programming course designed for beginners and students.</p>
       </div>
       <div class="card">
