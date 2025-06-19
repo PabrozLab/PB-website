@@ -9,6 +9,14 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body, p, h1, h2, h3 {
+  word-wrap: break-word;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f6f9fa;
@@ -20,14 +28,6 @@ body {
 ul {
   padding-left: 1.5rem;
 }
-
-/* 
-section.alt-bg {
-  background-color: #F0F4FF;
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  margin: 2rem 0;
-} */
 
 /* =============================== */
 /*             HEADER             */
@@ -138,21 +138,27 @@ main {
 
 .hero {
   text-align: center;
-  margin-top: 2rem;
-  /* background: linear-gradient(135deg, #4169E1, #FAF9F6); */
-  /* background: linear-gradient(45deg, #4169E1, #FAF9F6); */
+  margin-top: -2rem;
   background: linear-gradient(180deg, #4169E1, #FAF9F6);
-  /* background: radial-gradient(circle, #4169E1 0%, #FAF9F6 100%); */
-  /* background: linear-gradient(120deg, #4169E1 40%, #FAF9F6 100%); */
-
-  padding: 4rem 1.5rem;
+  padding: 3rem 5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease forwards;
   color: #fff;
-  /* Text color adjustment for better contrast */
 }
 
+
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end 4;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
 
 .hero h1 {
   font-size: 2.5rem;
@@ -169,6 +175,7 @@ main {
   margin-right: auto;
 }
 
+
 .hero h1,
 .hero p {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -177,7 +184,7 @@ main {
 .btn-primary {
   background-color: #4169E1;
   color: #fff;
-  padding: 0.8rem 1.6rem;
+  padding: 0.4rem 1rem;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -190,7 +197,7 @@ main {
 
 .btn-primary:hover {
   background-color: #1cdc2f;
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 .btn-primary-c {
@@ -238,6 +245,29 @@ main {
   }
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 /* =============================== */
 /*         SECTION HEADINGS       */
@@ -278,13 +308,20 @@ section.alt-bg {
 /* =============================== */
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 2rem 0;
 }
 
 .card {
+  flex: 1 1 300px;
+  max-width: 100%;
+  min-width: 280px;
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 10px;
   padding: 1.5rem;
@@ -294,11 +331,8 @@ section.alt-bg {
 
 .card:hover {
   color: #fff;
-  transform: translateY(-3px);
-  /* box-shadow: 0 6px 20px rgba(0,0,0,0.12); */
+  transform: translateY(-3px);  
   background: linear-gradient(45deg, #4169E1, #555);
-  /* background: linear-gradient(180deg, #4169E1, #FAF9F6); */
-
 }
 
 .card h3 {
@@ -475,49 +509,22 @@ footer {
     color: #333;
     text-decoration: none;
   }
-.nav-link.active {
+  .nav-link.active {
   color: #4169E1;
   font-weight: 700;
   border-bottom: 2px solid #4169E1;
+  }
+
+   .cards-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
-  /* .tooltip {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  } */
-
-  /* .tooltip::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: -1.8rem; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 15px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 10;
-  } */
-
-  /* .tooltip:hover::after {
-    opacity: 1;
-  } */
-}
-
-
-
-/* .tooltip {
-  outline: 1px dashed red;
-}
-.tooltip::after {
-  outline: 1px solid lime;
-} */
-/* It helps see where your tooltip box is actually rendered. */
 
 @media (min-width: 769px) {
   .menu-toggle {
