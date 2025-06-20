@@ -9,11 +9,17 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
-body, p, h1, h2, h3 {
+
+body,
+p,
+h1,
+h2,
+h3 {
   word-wrap: break-word;
 }
 
@@ -28,6 +34,14 @@ body {
 ul {
   padding-left: 1.5rem;
 }
+
+/* 
+section.alt-bg {
+  background-color: #F0F4FF;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+} */
 
 /* =============================== */
 /*             HEADER             */
@@ -92,6 +106,7 @@ nav a {
   padding: 4px 0;
   transition: color 0.3s ease;
 }
+
 nav a.active {
   color: #4169E1;
   font-weight: bold;
@@ -139,22 +154,35 @@ main {
 .hero {
   text-align: center;
   margin-top: -2rem;
+  /* background: linear-gradient(135deg, #4169E1, #FAF9F6); */
+  /* background: linear-gradient(45deg, #4169E1, #FAF9F6); */
   background: linear-gradient(180deg, #4169E1, #FAF9F6);
+  /* background: radial-gradient(circle, #4169E1 0%, #FAF9F6 100%); */
+  /* background: linear-gradient(120deg, #4169E1 40%, #FAF9F6 100%); */
+
   padding: 3rem 5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease forwards;
   color: #fff;
+  /* Text color adjustment for better contrast */
 }
 
-
+/* .hero-title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+} */
 
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #fff;
   width: 0;
+  /* animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite; */
   animation: typing 3s steps(30, end) forwards, blink 0.75s step-end 4;
+  /* animation: typing 3s steps(30, end) forwards; */
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #fff;
@@ -173,6 +201,9 @@ main {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  /* opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 3.2s; slightly after typing ends */
 }
 
 
@@ -182,6 +213,7 @@ main {
 }
 
 .btn-primary {
+   display: inline-block;
   background-color: #4169E1;
   color: #fff;
   padding: 0.4rem 1rem;
@@ -199,6 +231,7 @@ main {
   background-color: #1cdc2f;
   transform: translateY(-5px);
 }
+
 
 .btn-primary-c {
   background-color: #4169E1;
@@ -236,7 +269,7 @@ main {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(80px);
   }
 
   to {
@@ -246,18 +279,25 @@ main {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(5);
   }
 }
 
@@ -307,6 +347,12 @@ section.alt-bg {
 /*         COURSE/PROJECT CARDS   */
 /* =============================== */
 
+/* .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+} */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -331,8 +377,11 @@ section.alt-bg {
 
 .card:hover {
   color: #fff;
-  transform: translateY(-3px);  
+  transform: translateY(-3px);
+  /* box-shadow: 0 6px 20px rgba(0,0,0,0.12); */
   background: linear-gradient(45deg, #4169E1, #555);
+  /* background: linear-gradient(180deg, #4169E1, #FAF9F6); */
+
 }
 
 .card h3 {
@@ -346,6 +395,65 @@ section.alt-bg {
   /* color: #555; */
   line-height: 1.4;
 }
+
+/* study materials  */
+
+.materials-section {
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  background-color: #f5f7ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.materials-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.material-item {
+  margin: 1rem 0;
+}
+
+.toggle-btn {
+  width: 100%;
+  text-align: left;
+  background-color: #4169E1;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #27408B;
+}
+
+.material-content {
+  /* display: none; */
+  display: block !important;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.material-content a {
+  display: inline-block;
+  margin: 0.3rem 1rem 0.3rem 0;
+  color: #27408B;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.material-content a:hover {
+  color: #ff6600;
+}
+
 
 /* =============================== */
 /*             ABOUT US           */
@@ -458,14 +566,14 @@ footer {
     margin-top: 0.5rem;
   }
 
-   nav {
+  nav {
     width: 100%;
     margin-top: 1rem;
     text-align: center;
   }
 
   nav ul {
-     display: flex; 
+    display: flex;
     /* display: none; */
     flex-direction: row;
     /* ✅ Horizontal menu */
@@ -509,13 +617,41 @@ footer {
     color: #333;
     text-decoration: none;
   }
+
   .nav-link.active {
-  color: #4169E1;
-  font-weight: 700;
-  border-bottom: 2px solid #4169E1;
+    color: #4169E1;
+    font-weight: 700;
+    border-bottom: 2px solid #4169E1;
   }
 
-   .cards-container {
+  /* .tooltip {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  } */
+
+  /* .tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -1.8rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+  } */
+
+  /* .tooltip:hover::after {
+    opacity: 1;
+  } */
+  .cards-container {
     flex-direction: column;
     align-items: center;
     padding: 1rem 1rem;
@@ -525,6 +661,16 @@ footer {
     width: 100%;
   }
 }
+
+
+
+/* .tooltip {
+  outline: 1px dashed red;
+}
+.tooltip::after {
+  outline: 1px solid lime;
+} */
+/* It helps see where your tooltip box is actually rendered. */
 
 @media (min-width: 769px) {
   .menu-toggle {
@@ -552,12 +698,23 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
 /* ex */
 
 .container1 {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  border-radius: 18px;
+  background-color: #e7e7e7;
+  margin: 2rem 0;
 }
 
 /* Hero Section */
@@ -635,6 +792,9 @@ footer {
   color: white;
 }
 
+/* =============================== */
+/*             SHOP                */
+/* =============================== */
 
 /* store shop section */
 .store-section {
@@ -660,25 +820,27 @@ footer {
 
 .product-card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #F0F4FF;
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
   transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
 .product-card img {
-  /* width: 100%;
-  height: auto; */
+  /* width: 100%; */
+  /* height: auto; */
   border-radius: 8px;
 }
 
 .product-card h3 {
-  margin: 0.8rem 0 0.3rem;
+  margin: .7rem 0 0.07rem;
   color: #333;
 }
 
@@ -687,10 +849,11 @@ footer {
   color: #666;
 }
 
-.price {
-  display: block;
-  margin: 0.6rem 0;
-  font-weight: bold;
+.product-card .price {
+  font-size: 1.3rem;
+  /* display: block; */
+  margin: .1rem 0;
+  font-weight: 800;
   color: #800000;
 }
 
@@ -706,4 +869,98 @@ footer {
 
 .btn-buy:hover {
   background-color: #1A4CC0;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  /* max-width: 200px; */
+}
+
+.search-bar {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+  border-color: #4285f4;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.2);
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4285f4;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background: #3367d6;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+
+/* add to cart  */
+
+.btn-add-to-cart{
+  margin: 10px;
+   display: inline-block;
+  background-color: #4169E1;
+  color: #fff;
+  padding: 0.6rem .8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  /* 👈 This removes the underline */
+  font-size: 1.1rem;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #1cdc2f;
+  transform: translateY(-5px);
+}
+
+.btn-view-cart{
+  display: block;         /* or inline-block */
+  width: max-content;    /* optional, to shrink to text size */
+  margin: 0 auto;
+  background-color: #800000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  /* 👈 This removes the underline */
+  font-size: 1.2rem;
+}
+.btn-view-cart:hover {
+  background-color: #1cdc2f;
+  transform: translateY(-5px);
 }
