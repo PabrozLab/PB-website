@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" href="./PBnew4.png"> -->
+    <link rel="icon" type="image/png" href="./PBnew5.png">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Quicksand, sans-serif;
+            padding: 2rem;
+        }
+
+        .cart-item {
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn-checkout {
+            margin-top: 2rem;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Your Cart</h2>
+    <div id="cart-container"></div>
+    <button class="btn-checkout" onclick="checkout()">Proceed to Checkout</button>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const container = document.getElementById("cart-container");
+
+        if (cart.length === 0) {
+            container.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            cart.forEach((item, index) => {
+                const div = document.createElement("div");
+                div.className = "cart-item";
+                div.innerText = `${index + 1}. ${item.name} - Rs. ${item.price}`;
+                container.appendChild(div);
+            });
+        }
+
+        function checkout() {
+            if (cart.length === 0) return alert("Your cart is empty.");
+
+            const items = cart.map(i => i.name).join(", ");
+            const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSdnfAgj9Mshij-cLRqec1Hw_M8lSdk502Ft3APHwqgbqHq5fg/viewform?usp=pp_url&entry.543118114=${encodeURIComponent(items)}`;
+
+            // Clear cart after redirect (optional)
+            localStorage.removeItem("cart");
+            window.open(formURL, "_blank");
+        }
+    </script>
+</body>
+
+</html>
