@@ -59,48 +59,149 @@
 
   </header>
   <main>
-    <section class="hero">
 
+    <section class="hero">
       <h2>Explore Our STEM Courses</h2>
       <p>Learn Robotics, Coding and Engineering fundamentals step-by-step.</p>
     </section>
 
 
+
+
+
+    <section class="cards-filter">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="programming">Programming</button>
+      <button class="filter-btn" data-category="robotics">Robotics</button>
+      <button class="filter-btn" data-category="electronics">Electronics</button>
+    </section>
+
     <section class="cards-container">
-      <div class="card">
-        <h3>Robotics Basics</h3>
+      <div class="card" data-category="robotics">
+        <h3 class="card-title">Robotics Basics <span class="badge robotics">Robotics</span></h3>
         <p>Learn the fundamentals of robotics including sensors, actuators, and microcontrollers.</p>
-      </div>
-      <div class="card">
-        <h3>Python for Kids</h3>
-        <p>Interactive Python programming course designed for beginners and students.</p>
-      </div>
-      <div class="card">
-        <h3>Basic Electronics & Circuits</h3>
-        <p>Learn the fundamentals of robotics including sensors, actuators, and microcontrollers.</p>
-      </div>
-      <div class="card">
-        <h3>Robotics Basics</h3>
-        <p>Learn the fundamentals of robotics including sensors, actuators, and microcontrollers.</p>
-      </div>
-      <div class="card">
-        <h3>Arduino for Beginners</h3>
-        <p>Interactive Python programming course designed for beginners and students.</p>
-      </div>
-      <div class="card">
-        <h3>Python for Beginners</h3>
-        <p>Interactive Python programming course designed for beginners and students.</p>
-      </div>
-      <div class="card">
-        <h3>Scratch Programming</h3>
-        <p>Interactive Python programming course designed for beginners and students.</p>
-      </div>
-      <div class="card">
-        <h3>PCB Design</h3>
-        <p>Interactive Python programming course designed for beginners and students.</p>
+        <button class="toggle-details">🔍 View Details</button>
+
+        <div class="card-details">
+          <h4>📄 PDF Guide</h4>
+          <a href="materials/robotics-basics.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Video Tutorial</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/Z1Yd7upQsXY" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>This course covers the basics of robotics, sensors, actuators, Arduino, and microcontroller projects.</p>
+        </div>
       </div>
 
+      <div class="card" data-category="programming">
+        <h3>Python for Kids <span class="badge programming">Programming</span></h3>
+        <p>Interactive Python programming course designed for beginners and students.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 PDF Guide</h4>
+          <a href="materials/python-kids-guide1.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Video Tutorial</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>This course introduces Python in a fun and visual way, tailored for younger learners using simple examples.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" data-category="electronics">
+        <h3>Basic Electronics & Circuits <span class="badge electronics">Electronics</span></h3>
+        <p>Understand the basics of voltage, current, resistors, LEDs, and breadboard circuits.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 PDF Notes</h4>
+          <a href="materials/electronics-basics.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Video Tutorial</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/HOFp8bHTN30" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>Learn about basic electrical components, reading circuit diagrams, and building simple circuits.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="robotics">
+        <h3>Arduino for Beginners <span class="badge robotics">Robotics</span></h3>
+        <p>Get started with Arduino hardware and programming using basic sensors and LEDs.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 Arduino eBook</h4>
+          <a href="materials/arduino-beginners.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Arduino Intro</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/nL34zDTPkcs" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>This course walks through setting up Arduino, writing your first sketch, and blinking LEDs.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="programming">
+        <h3>Python for Beginners <span class="badge programming">Programming</span></h3>
+        <p>Interactive Python programming course for older students and complete beginners.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 PDF Notes</h4>
+          <a href="materials/python-beginners.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Python Video</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/_uQrJ0TkZlc" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>Start from scratch and learn Python programming with practical examples and coding exercises.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="programming">
+        <h3>Scratch Programming <span class="badge programming">Programming</span></h3>
+        <p>Build fun games and animations using block-based Scratch programming.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 Scratch Guide</h4>
+          <a href="materials/scratch-guide.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 Scratch Tutorial</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIpmkeqJhmY" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>Scratch is great for early coders — learn logic, loops, and creativity with this drag-and-drop language.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" data-category="robotics">
+        <h3>PCB Design <span class="badge robotics">Robotics</span></h3>
+        <p>Learn how to design your own printed circuit boards using software like KiCad or EasyEDA.</p>
+        <button class="toggle-details">🔍 View Details</button>
+        <div class="card-details">
+          <h4>📄 PCB Design Notes</h4>
+          <a href="materials/pcb-design-guide.pdf" target="_blank">Open PDF</a>
+
+          <h4>🎥 PCB Design Video</h4>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/nSnW_lPWk4A" frameborder="0"
+            allowfullscreen></iframe>
+
+          <h4>📝 Summary</h4>
+          <p>This module teaches the basics of designing PCBs, routing, footprints, and preparing for manufacturing.</p>
+        </div>
+      </div>
+
+      <!-- Add more similarly with data-category and badge -->
     </section>
+
     <!-- Study Materials Section -->
     <section class="materials-section">
       <h2 style="text-align: center; color: #4169E1;">📘 Study Materials</h2>
@@ -147,8 +248,34 @@
     <p>&copy; 2025 PabrozLab. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 
+  <!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+
+        // Toggle button active style
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter cards
+        courseCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script> -->
+  <script src="script.js"></script>
 </body>
 
 </html>
